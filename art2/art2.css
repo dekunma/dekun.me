@@ -1,0 +1,90 @@
+#one {
+    width: 200px;
+    height: 200px;
+    background-color: #0ff;
+    position: relative;
+    left:100px;
+    bottom:-80px;
+    
+    
+}
+
+#one:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #ff0;
+    
+}
+#two {
+    width: 190px;
+    height: 190px;
+    background-color:#3ff;
+    margin-left: 170px
+}
+
+#two:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #ff3;
+    
+}
+
+#three {
+    width: 180px;
+    height: 180px;
+    background-color:#6ff;
+    margin-left:160px
+}
+
+#three:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #ff6;
+    
+}
+
+#four {
+    width: 170px;
+    height: 170px;
+    background-color:#9ff;
+    margin-left:150px
+}
+
+#four:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #ff9;
+    
+}
+
+#five {
+    width: 160px;
+    height: 160px;
+    background-color:#cff;
+    margin-left:140px
+}
+
+#five:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #ffc;
+    
+}
+
+#six {
+    width: 150px;
+    height: 150px;
+    background-color:#fff;
+    margin-left:130px
+}
+
+#six:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    
+}
+body {
+    background-color: grey;
+}
+
