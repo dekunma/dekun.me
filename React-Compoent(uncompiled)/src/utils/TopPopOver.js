@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Popover from '@material-ui/core/Popover';
-
 const styles = theme => ({
   typography: {
     margin: theme.spacing.unit * 2,
@@ -34,11 +33,11 @@ class TopPopOver extends React.Component {
           anchorEl={anchorEl}
           onClose={this.handleClose}
           anchorOrigin={{
-            vertical: 'top',
+            vertical: 'center',
             horizontal: 'center',
           }}
           transformOrigin={{
-            vertical: 'bottom',
+            vertical: 'center',
             horizontal: 'center',
           }}
         >

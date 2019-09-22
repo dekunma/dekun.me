@@ -129,9 +129,10 @@ class App extends React.Component {
      if(title === "Coding"){this.setState({content:"coding projects I've done:\n-Free VPN platforms: www.cd7zvpn.top; vpn.7debate.top\n-Website for school debate club: www.7debate.club\n-Blog for my class: www.kb201602.com\n-Headless CMS (in progress): https://github.com/dekunma/Zhongxi-Headless-CMS-Frontend"})}
       else if (title === "Sketching"){this.setState({content:"Sketching is one of my hobby. \nThis is the sketch of my ex-girl friend (unfortunately)"})}
       else if (title === "Robotics"){this.setState({content:"I am the leading programmer in my school's VEX robotics club.\n We have won\n-Amaze Award (The highest technical achievement) in 2017 VEX World Championship\n-Gold Award in 2016 World Asia Championship\n-First Prize in 2019 World Asia Open"})}
-      else if (title === "Tketching"){this.setState({content:"I help others with my knowleges.\n-ANZ & Bainian High School: http://anz.zhxi.co/ \nInternship as a TA in Le Wagon\n Little Science Monster Club in Great China"})}
+      else if (title === "Teaching"){this.setState({content:"I help others with my knowleges.\n-ANZ & Bainian High School: http://anz.zhxi.co/ \nInternship as a TA in Le Wagon\n Little Science Monster Club in Great China"})}
       else if (title === "MIT AI Program"){this.setState({content:"https://github.com/dekunma/2017-MIT-Machine-Learning-Camp"})}
-      else if (title === "Zhongxi"){this.setState({content:"I'm a member in Zhongxi Computer Science community.\n From there I learnt knowleges, and I contribute back to the community"})}
+      // can't figure out why this line won't work without "&&..."
+      else if (title === "Zhongxi"&&!this.state.open){this.setState({content:"I'm a member in Zhongxi Computer Science community.\n From there I learnt knowleges, and I contribute back to the community"})}
   }
   openPopOver(){
     return true;
