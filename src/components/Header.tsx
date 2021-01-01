@@ -2,12 +2,29 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from '../utils';
-import PropTypes from 'prop-types';
 
 const { Item, SubMenu } = Menu;
 
-class Header extends React.Component {
-  constructor(props) {
+interface Props {
+  dataSource : {
+    Menu: { children: Array<any> },
+    wrapper: { className: string },
+    page: { className: string},
+    logo: {
+      className: string,
+      children: string
+    },
+    mobileMenu: { className: string },
+  };
+  isMobile : boolean
+}
+
+interface State {
+  phoneOpen: boolean | undefined;
+}
+
+class Header extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       phoneOpen: undefined,
@@ -42,7 +59,7 @@ class Header extends React.Component {
             }
             popupClassName="header3-item-child"
           >
-            {subItem.map(($item, ii) => {
+            {subItem.map(($item: any, ii: number) => {
               const { children: childItem } = $item;
               const child = childItem.href ? (
                 <a {...childItem}>
@@ -70,7 +87,7 @@ class Header extends React.Component {
         </Item>
       );
     });
-    const moment = phoneOpen === undefined ? 300 : null;
+    const moment = phoneOpen === undefined ? 300 : undefined;
     return (
       <TweenOne
         component="header"
@@ -87,6 +104,7 @@ class Header extends React.Component {
             {...dataSource.logo}
           >
             <img width="100%" src={dataSource.logo.children} alt="img" />
+            {/* <p>dekun.me</p> */}
           </TweenOne>
           {isMobile && (
             <div
@@ -115,7 +133,7 @@ class Header extends React.Component {
                     },
                     ease: 'easeInOutQuad',
                   }
-                : null
+                : undefined
             }
             moment={moment}
             reverse={!!phoneOpen}
@@ -135,9 +153,3 @@ class Header extends React.Component {
 }
 
 export default Header;
-
-Header.propTypes = {
-    dataSource: PropTypes.object,
-    isMobile: PropTypes.bool
-
-}

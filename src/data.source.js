@@ -17,8 +17,8 @@ export const HeaderDataSource = {
           href: '#',
           children: [
             {
-              children: '导航一',
-              name: 'text',
+              children: 'Projects',
+              name: 'projects',
               className: 'kjdqz2x48gp-editor_css',
             },
           ],
@@ -29,22 +29,23 @@ export const HeaderDataSource = {
             className: 'item-sub',
             children: {
               className: 'item-sub-item',
+              href: 'http://www.courum.com',
               children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
+                // {
+                //   name: 'image0',
+                //   className: 'item-image',
+                //   children:
+                //     'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+                // },
                 {
                   name: 'title',
                   className: 'item-title',
-                  children: 'Ant Design',
+                  children: 'Courum.com',
                 },
                 {
                   name: 'content',
                   className: 'item-content',
-                  children: '企业级 UI 设计体系',
+                  children: 'Course forum project',
                 },
               ],
             },
@@ -54,50 +55,85 @@ export const HeaderDataSource = {
             className: 'item-sub',
             children: {
               className: 'item-sub-item',
+              href: 'https://github.com/dekunma/EarthquakeMonitor-ReactNative',
               children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
                 {
                   name: 'title',
                   className: 'item-title',
-                  children: 'Ant Design',
+                  children: 'Earthquake Monitor',
                 },
                 {
                   name: 'content',
                   className: 'item-content',
-                  children: '企业级 UI 设计体系',
+                  children: 'Android app (React Native)',
+                },
+              ],
+            },
+          },
+          {
+            name: 'sub2',
+            className: 'item-sub',
+            children: {
+              className: 'item-sub-item',
+              href: 'https://github.com/dekunma/outline-website',
+              children: [
+                {
+                  name: 'title',
+                  className: 'item-title',
+                  children: 'vpn.7debate.club',
+                },
+                {
+                  name: 'content',
+                  className: 'item-content',
+                  children: 'VPN key management panel',
+                },
+              ],
+            },
+          },
+          {
+            name: 'sub3',
+            className: 'item-sub',
+            children: {
+              className: 'item-sub-item',
+              href: 'https://github.com/dekunma/',
+              children: [
+                {
+                  name: 'title',
+                  className: 'item-title',
+                  children: 'Github',
+                },
+                {
+                  name: 'content',
+                  className: 'item-content',
+                  children: 'See my other open-source projects',
                 },
               ],
             },
           },
         ],
       },
+      // {
+      //   name: 'item1',
+      //   className: 'header3-item',
+      //   children: {
+      //     href: '#',
+      //     children: [{ children: '导航二', name: 'text' }],
+      //   },
+      // },
+      // {
+      //   name: 'item2',
+      //   className: 'header3-item',
+      //   children: {
+      //     href: '#',
+      //     children: [{ children: '导航三', name: 'text' }],
+      //   },
+      // },
       {
-        name: 'item1',
+        name: 'Contact',
         className: 'header3-item',
         children: {
           href: '#',
-          children: [{ children: '导航二', name: 'text' }],
-        },
-      },
-      {
-        name: 'item2',
-        className: 'header3-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航三', name: 'text' }],
-        },
-      },
-      {
-        name: 'item3',
-        className: 'header3-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航四', name: 'text' }],
+          children: [{ children: 'Contact', name: 'text' }],
         },
       },
     ],
