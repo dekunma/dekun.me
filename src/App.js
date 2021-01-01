@@ -2,7 +2,6 @@
 // https://www.sitepoint.com/react-with-typescript-best-practices/
 
 import React from 'react';
-import logo from './logo.svg';
 
 // components and screens
 import Header from './components/Header';
@@ -12,8 +11,6 @@ import Banner from './components/Banner'
 import { HeaderDataSource, BannerDataSource } from './data.source.js';
 
 // styles
-import headerStyle from './styles/headerStyle.less'
-import bannerStyle from './styles/bannerStyle.less'
 import './styles/App.less'
 
 import { enquireScreen } from 'enquire-js';
