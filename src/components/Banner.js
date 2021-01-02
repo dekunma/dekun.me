@@ -30,7 +30,7 @@ class Banner extends React.Component {
           <div key="title" {...dataSource.title}>
             {typeof dataSource.title.children === 'string' &&
             dataSource.title.children.match(isImg) ? (
-              <img src={Logo} width="75%" alt="img" />
+              <img src={Logo} width="65%" alt="img" />
             ) : (
               dataSource.title.children
             )}

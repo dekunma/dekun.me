@@ -1,4 +1,6 @@
 import React from 'react';
+import { CodeTwoTone, EditTwoTone, PieChartTwoTone, MailOutlined, PhoneOutlined, LinkedinOutlined } from '@ant-design/icons';
+
 export const HeaderDataSource = {
   wrapper: { className: 'header3 home-page-wrapper' },
   page: { className: 'home-page kjdqwtmiyfd-editor_css' },
@@ -116,27 +118,19 @@ export const HeaderDataSource = {
           },
         ],
       },
-      // {
-      //   name: 'item1',
-      //   className: 'header3-item',
-      //   children: {
-      //     href: '#',
-      //     children: [{ children: '导航二', name: 'text' }],
-      //   },
-      // },
-      // {
-      //   name: 'item2',
-      //   className: 'header3-item',
-      //   children: {
-      //     href: '#',
-      //     children: [{ children: '导航三', name: 'text' }],
-      //   },
-      // },
+      {
+        name: 'Skills',
+        className: 'header3-item',
+        children: {
+          href: '#Skills',
+          children: [{ children: 'Skills', name: 'text' }],
+        },
+      },
       {
         name: 'Contact',
         className: 'header3-item',
         children: {
-          href: '#',
+          href: '#Contact',
           children: [{ children: 'Contact', name: 'text' }],
         },
       },
@@ -160,13 +154,13 @@ export const BannerDataSource = {
     children: 'Learn More',
   },
 };
-export const Content00DataSource = {
+export const SkillsDataSource = {
   wrapper: { className: 'home-page-wrapper content0-wrapper' },
   page: { className: 'home-page content0' },
   OverPack: { playScale: 0.3, className: '' },
   titleWrapper: {
     className: 'title-wrapper',
-    children: [{ name: 'title', children: '产品与服务' }],
+    children: [{ name: 'title', children: 'Skills' }],
   },
   childWrapper: {
     className: 'content0-block-wrapper',
@@ -180,17 +174,24 @@ export const Content00DataSource = {
           className: 'content0-block-item',
           children: [
             {
-              name: 'image',
+              name: 'icon',
               className: 'content0-block-icon',
               children:
-                'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
+                <CodeTwoTone />
             },
             {
               name: 'title',
               className: 'content0-block-title',
-              children: '一站式业务接入',
+              children: 'Code.',
             },
-            { name: 'content', children: '支付、结算、核算接入产品效率翻四倍' },
+            { 
+                name: 'content', children: [
+                <p key="1">Java</p>, 
+                <p key="2">JavaScript</p>,
+                <p key="2">C++</p>,
+                <p key="2">Web Development</p>
+              ] 
+            },
           ],
         },
       },
@@ -203,19 +204,23 @@ export const Content00DataSource = {
           className: 'content0-block-item',
           children: [
             {
-              name: 'image',
+              name: 'icon',
               className: 'content0-block-icon',
               children:
-                'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
+                <EditTwoTone />
             },
             {
               name: 'title',
               className: 'content0-block-title',
-              children: '一站式事中风险监控',
+              children: 'Design.',
             },
             {
               name: 'content',
-              children: '在所有需求配置环节事前风险控制和质量控制能力',
+              children: [
+                <p key="1">Figma</p>, 
+                <p key="2">Adobe After Effects</p>,
+                <p key="2">Adobe Premiere</p>
+              ]
             },
           ],
         },
@@ -229,19 +234,23 @@ export const Content00DataSource = {
           className: 'content0-block-item',
           children: [
             {
-              name: 'image',
+              name: 'icon',
               className: 'content0-block-icon',
               children:
-                'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
+                <PieChartTwoTone />
             },
             {
               name: 'title',
               className: 'content0-block-title',
-              children: '一站式数据运营',
+              children: 'Management.',
             },
             {
               name: 'content',
-              children: '沉淀产品接入效率和运营小二工作效率数据',
+              children: [
+                <p key="1">Developer community management</p>, 
+                <p key="2">Team management</p>,
+                <p key="2">Tech lead</p>
+              ]
             },
           ],
         },
@@ -249,7 +258,7 @@ export const Content00DataSource = {
     ],
   },
 };
-export const Content30DataSource = {
+export const ContactDataSource = {
   wrapper: { className: 'home-page-wrapper content3-wrapper' },
   page: { className: 'home-page content3' },
   OverPack: { playScale: 0.3 },
@@ -258,14 +267,9 @@ export const Content30DataSource = {
     children: [
       {
         name: 'title',
-        children: '蚂蚁金融云提供专业的服务',
+        children: 'Contact',
         className: 'title-h1',
-      },
-      {
-        name: 'content',
-        className: 'title-content',
-        children: '基于阿里云强大的基础资源',
-      },
+      }
     ],
   },
   block: {
@@ -280,14 +284,17 @@ export const Content30DataSource = {
           icon: {
             className: 'content3-icon',
             children:
-              'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png',
+              <MailOutlined />
           },
           textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '企业资源管理' },
+          title: { className: 'content3-title', children: 'Email' },
           content: {
             className: 'content3-content',
             children:
-              '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。',
+              <div>
+                <p><a href="mailto:william@dekun.me">William@dekun.me</a></p>
+                <p><a href="mailto:dm4524@nyu.edu">dm4524@nyu.edu</a></p>
+              </div>
           },
         },
       },
@@ -300,14 +307,18 @@ export const Content30DataSource = {
           icon: {
             className: 'content3-icon',
             children:
-              'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
+              <PhoneOutlined />
           },
           textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '云安全' },
+          title: { className: 'content3-title', children: 'Phone' },
           content: {
             className: 'content3-content',
             children:
-              '按金融企业安全要求打造的完整云上安全体系，全方位保障金融应用及数据安全。',
+            <div>
+              <p>+86 176-1288-8656</p>
+              <p>+86 198-2845-5321</p>
+              <p>+1 858-214-4439</p>
+            </div>
           },
         },
       },
@@ -320,88 +331,31 @@ export const Content30DataSource = {
           icon: {
             className: 'content3-icon',
             children:
-              'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
+              <LinkedinOutlined />
           },
           textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '云监控' },
+          title: { className: 'content3-title', children: 'LinkedIn' },
           content: {
             className: 'content3-content',
             children:
-              '分布式云环境集中监控，统一资源及应用状态视图，智能分析及故障定位。',
+              <div>
+                <a href="https://www.linkedin.com/in/dekun-ma-036a9b198/" rel='noreferrer' target='_blank'>Dekun Ma</a>
+              </div>
           },
         },
       },
-      {
-        name: 'block3',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '移动' },
-          content: {
-            className: 'content3-content',
-            children:
-              '一站式移动金融APP开发及全面监控；丰富可用组件，动态发布和故障热修复。',
-          },
-        },
-      },
-      {
-        name: 'block4',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '分布式中间件' },
-          content: {
-            className: 'content3-content',
-            children:
-              '金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。',
-          },
-        },
-      },
-      {
-        name: 'block5',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '大数据' },
-          content: {
-            className: 'content3-content',
-            children:
-              '一站式、全周期大数据协同工作平台，PB级数据处理、毫秒级数据分析工具。',
-          },
-        },
-      },
+      
     ],
   },
 };
-export const Footer00DataSource = {
+export const FooterDataSource = {
   wrapper: { className: 'home-page-wrapper footer0-wrapper' },
   OverPack: { className: 'home-page footer0', playScale: 0.05 },
   copyright: {
     className: 'copyright',
     children: (
       <span>
-        ©2018 <a href="https://motion.ant.design">Ant Motion</a> All Rights
+        ©2020 <a href="https://www.linkedin.com/in/dekun-ma-036a9b198/" rel="noreferrer" target='_blank'>Dekun Ma</a> All Rights
         Reserved
       </span>
     ),

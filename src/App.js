@@ -2,16 +2,20 @@
 // https://www.sitepoint.com/react-with-typescript-best-practices/
 
 import React from 'react';
+import logo from './logo.svg';
 
 // components and screens
 import Header from './components/Header';
-import Banner from './components/Banner'
+import Banner from './components/Banner';
+import Footer from './components/Footer';
+import Skills from './components/Skills';
+import Contact from './components/Contact'
 
 // data source
-import { HeaderDataSource, BannerDataSource } from './data.source.js';
+import { HeaderDataSource, BannerDataSource, FooterDataSource, SkillsDataSource, ContactDataSource } from './data.source.js';
 
 // styles
-import './styles/App.less'
+import './styles/index.less'
 
 import { enquireScreen } from 'enquire-js';
 
@@ -26,8 +30,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile,
-      show: !location.port, // 如果不是 dva 2.0 请删除
+      isMobile
     };
   }
 
@@ -36,31 +39,38 @@ export default class App extends React.Component {
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
     });
-    // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
-    /* 如果不是 dva 2.0 请删除 start */
-    if (location.port) {
-      // 样式 build 时间在 200-300ms 之间;
-      setTimeout(() => {
-        this.setState({
-          show: true,
-        });
-      }, 500);
-    }
-    /* 如果不是 dva 2.0 请删除 end */
   }
 
   render() {
     const children = [
       <Header
-        id="Nav3_0"
-        key="Nav3_0"
+        id="Header"
+        key="Header"
         dataSource={HeaderDataSource}
         isMobile={this.state.isMobile}
       />,    
       <Banner
-        id="Banner0_0"
-        key="Banner0_0"
+        id="Banner"
+        key="Banner"
         dataSource={BannerDataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Skills
+        id="Skills"
+        key="Skills"
+        dataSource={SkillsDataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Contact
+        id="Contact"
+        key="Contact"
+        dataSource={ContactDataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Footer 
+        id="Footer"
+        key="Footer"
+        dataSource={FooterDataSource}
         isMobile={this.state.isMobile}
       />,
     ];
@@ -71,9 +81,7 @@ export default class App extends React.Component {
           this.dom = d;
         }}
       >
-        {/* 如果不是 dva 2.0 替换成 {children} start */}
-        {this.state.show && children}
-        {/* 如果不是 dva 2.0 替换成 {children} end */}
+        {children}
       </div>
     );
   }
