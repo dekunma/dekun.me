@@ -4,8 +4,8 @@ export const HeaderDataSource = {
   page: { className: 'home-page kjdqwtmiyfd-editor_css' },
   logo: {
     className: 'header3-logo',
-    children:
-      'https://gw.alipayobjects.com/zos/basement_prod/b30cdc2a-d91c-4c78-be9c-7c63b308d4b3.svg',
+    // children:
+    //   '../images/M.png',
   },
   Menu: {
     className: 'header3-menu',
@@ -30,6 +30,7 @@ export const HeaderDataSource = {
             children: {
               className: 'item-sub-item',
               href: 'http://www.courum.com',
+              target: '_blank',
               children: [
                 // {
                 //   name: 'image0',
@@ -56,6 +57,7 @@ export const HeaderDataSource = {
             children: {
               className: 'item-sub-item',
               href: 'https://github.com/dekunma/EarthquakeMonitor-ReactNative',
+              target: '_blank',
               children: [
                 {
                   name: 'title',
@@ -76,6 +78,7 @@ export const HeaderDataSource = {
             children: {
               className: 'item-sub-item',
               href: 'https://github.com/dekunma/outline-website',
+              target: '_blank',
               children: [
                 {
                   name: 'title',
@@ -96,6 +99,7 @@ export const HeaderDataSource = {
             children: {
               className: 'item-sub-item',
               href: 'https://github.com/dekunma/',
+              target: '_blank',
               children: [
                 {
                   name: 'title',
@@ -149,7 +153,7 @@ export const BannerDataSource = {
   },
   content: {
     className: 'banner0-content',
-    children: '一个高效的页面动画解决方案',
+    children: 'Be a developer. Not a programmer.',
   },
   button: {
     className: 'banner0-button kjdr0na6vkj-editor_css',

@@ -3,6 +3,8 @@ import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from '../utils';
 
+import MLogo from '../images/M.png'
+
 const { Item, SubMenu } = Menu;
 
 interface Props {
@@ -103,8 +105,7 @@ class Header extends React.Component<Props, State> {
             animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
             {...dataSource.logo}
           >
-            <img width="100%" src={dataSource.logo.children} alt="img" />
-            {/* <p>dekun.me</p> */}
+            <img height="45px" src={MLogo} alt="img" />
           </TweenOne>
           {isMobile && (
             <div

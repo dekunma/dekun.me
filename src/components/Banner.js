@@ -5,6 +5,9 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import { isImg } from '../utils';
 
+import Logo from '../images/Logo.png'
+import CV from '../files/Dekun Ma_English.pdf'
+
 class Banner extends React.Component {
 
   constructor(props) {
@@ -27,7 +30,7 @@ class Banner extends React.Component {
           <div key="title" {...dataSource.title}>
             {typeof dataSource.title.children === 'string' &&
             dataSource.title.children.match(isImg) ? (
-              <img src={dataSource.title.children} width="100%" alt="img" />
+              <img src={Logo} width="75%" alt="img" />
             ) : (
               dataSource.title.children
             )}
@@ -35,7 +38,7 @@ class Banner extends React.Component {
           <div key="content" {...dataSource.content}>
             {dataSource.content.children}
           </div>
-          <Button ghost key="button" {...dataSource.button}>
+          <Button type="primary" key="button" target='_blank' href={CV} {...dataSource.button}>
             {dataSource.button.children}
           </Button>
         </QueueAnim>
