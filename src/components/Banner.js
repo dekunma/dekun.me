@@ -38,9 +38,12 @@ class Banner extends React.Component {
           <div key="content" {...dataSource.content}>
             {dataSource.content.children}
           </div>
-          <Button type="primary" key="button" target='_blank' href={CV} {...dataSource.button}>
-            {dataSource.button.children}
-          </Button>
+          <div className="banner0-button-wrapper">
+            <Button type="primary" key="button" shape="round" target='_blank' href={CV} {...dataSource.button}>
+              {dataSource.button.children}
+            </Button>
+          </div>
+
         </QueueAnim>
         <TweenOne
           animation={{
