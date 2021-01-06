@@ -99,7 +99,7 @@ class Header extends React.Component<Props, State> {
       >
         <div
           {...dataSource.page}
-          className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
+          className={`${dataSource.page.className} ${phoneOpen ? ' open' : ''}`}
         >
           <TweenOne
             animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
