@@ -1,5 +1,6 @@
 # Hi there 👋
 
+Thank you for stopping by!  
 This is **Dekun Ma**.  
 Undergraduate student majoring in Computer Science and Data Science.
 
