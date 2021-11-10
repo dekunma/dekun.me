@@ -1,7 +1,7 @@
 ---
 title: "Union Find with 'Move' Operation"
 date: 2021-11-09T21:47:56-05:00
-draft: true
+draft: false
 tags: ['Union Find']
 categories: ['algorithms', 'data structures']
 ---
