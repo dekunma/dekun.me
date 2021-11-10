@@ -1,0 +1,12 @@
+.custom-header {
+    width: 100%;
+    cursor: pointer;
+}
+
+.custom-header-icon {
+    font-size: 24px;
+}
+
+.custom-header-icon-justify::before {
+    top: -3px;
+}
