@@ -1,5 +1,3 @@
-# Hi there 👋
-
 Thank you for stopping by!  
 This is the blog of **Dekun Ma**.  
 Undergraduate student majoring in Computer Science and Data Science.
