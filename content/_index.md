@@ -1,6 +1,7 @@
 Thank you for stopping by!  
-This is the blog of **Dekun Ma**.  
-Undergraduate student majoring in Computer Science and Data Science.
+I'm **Dekun Ma**.  
+Undergraduate student majoring in Computer Science and Data Science.  
+[More About Me →](/about)
 
 <div class='social-links'>
     <a href="mailto:william@dekun.me" target='_blank' class="iconfont icon-email custom-header-icon" title="email"></a>
