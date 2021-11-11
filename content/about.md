@@ -1,7 +1,7 @@
 ---
 title: 'About'
 date: 2021-11-10T23:06:05-05:00
-draft: true
+draft: false
 comment: false
 ---
 
