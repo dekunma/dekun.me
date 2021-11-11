@@ -10,7 +10,9 @@ categories: ['algorithms', 'data structures']
 
 ## Problem statement
 
+{{% admonition note %}}
 In addition to the `union` and `find` operations of a normal Union Find, we also need to be able to `move` an element from one set to another.
+{{% /admonition %}}
 
 For exmaple:  
 If the intial sets in our Union Find are:
@@ -73,21 +75,11 @@ Becasue by setting the parent of `1` to `3`, we also move all the children of `1
 ## Solution
 
 The core idea to solve this problem is: we want to make sure we never `move` an element that has children.
-To accomplish this, we want to do:
+To accomplish this, we want to:
 
-1. Path compression. So that every element in a set will connect to one single parent directly.
-2. Dummy root node (will be explained). So that the one single parent node will never be moved during a `move` operation.
-
-### Path compression
-
-sample code for path compression:
-
-```java
-public int find(int ii) {
-    if (parent[ii] != ii) parent[ii] = find(parent[ii]);
-    return parent[ii];
-}
-```
+{{% admonition note %}}
+Use dummy root node. So that the nodes whose parent is the node itself will never be moved during a `move` operation.
+{{% /admonition %}}
 
 ### Dummy root node
 
@@ -150,6 +142,24 @@ Sets are `{1, 2, 3}, {4}, {5}`.
 ```
 
 Sets are `{1, 2, 3, 5}, {4}`
+
+## Implementation
+
+Different from the standard union find implementation, our `parent[]` array will have length of `2 * (number of nodes)`.
+
+Intially, we will set the `parent` of each node to `node_index + 1`, and the `parent` of each dummy node to itself, just like the illustration of the above section:
+
+```
+dummy nodes:     {6}  {7}  {8}  {9}  {10}
+                  |    |    |    |    |
+normal nodes:    {1}, {2}, {3}, {4}, {5}
+```
+
+The `parent[]` array in this example will be (assuming we are not using the `0`th slot):
+
+```
+[0, 6, 7, 8, 9, 10, 6, 7, 8, 9, 10]
+```
 
 ## Acknowledgement
 
