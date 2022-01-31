@@ -25,7 +25,11 @@ a {
 .my-icon {
   font-size: 2rem;
   color: #a2a2a2;
-  margin: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+.icon-container {
+  margin: -0.3rem;
 }
 
 .bold {
