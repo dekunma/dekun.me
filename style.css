@@ -20,6 +20,7 @@ a {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
+  cursor: none;
 }
 
 .my-icon {
@@ -40,7 +41,7 @@ a {
 .outer-container {
   display: flex;
   align-items: center;
-  margin: 1.2rem;
+  padding: 1.2rem;
 }
 
 .content {
@@ -93,7 +94,7 @@ span:hover {
   .outer-container {
     display: flex;
     align-items: center;
-    margin: 2rem;
+    padding: 2rem;
   }
 
   .content {
@@ -117,7 +118,7 @@ span:hover {
   .outer-container {
     display: flex;
     align-items: center;
-    margin: 3rem;
+    padding: 3rem;
   }
 
   .content {
