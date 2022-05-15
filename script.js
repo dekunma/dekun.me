@@ -12,23 +12,41 @@ window.addEventListener("load", () => {
     for (let i = 0; i < rawString.length; i++) {
       if (rawString.substring(i, i + 3) === "NYU") {
         i += 2;
-        const nyu = document.createElement("a");
-        nyu.textContent = "NYU";
-        nyu.href = "https://www.nyu.edu/";
-        nyu.target = "_blank";
-        nyu.classList.add("violet");
-        element.appendChild(nyu);
+        const elem = document.createElement("a");
+        elem.textContent = "NYU";
+        elem.href = "https://www.nyu.edu/";
+        elem.target = "_blank";
+        elem.classList.add("violet");
+        element.appendChild(elem);
         continue;
       }
 
       if (rawString.substring(i, i + 12) === "ThoughtWorks") {
         i += 11;
-        const nyu = document.createElement("a");
-        nyu.textContent = "ThoughtWorks";
-        nyu.href = "https://www.thoughtworks.com/";
-        nyu.target = "_blank";
-        nyu.classList.add("tw");
-        element.appendChild(nyu);
+        const elem = document.createElement("a");
+        elem.textContent = "ThoughtWorks";
+        elem.href = "https://www.thoughtworks.com/";
+        elem.target = "_blank";
+        elem.classList.add("tw");
+        element.appendChild(elem);
+        continue;
+      }
+
+      if (rawString.substring(i, i + 3) === "Tik") {
+        i += 2;
+        const elem = document.createElement("span");
+        elem.textContent = "Tik";
+        elem.classList.add("tik", 'bold', 'content');
+        element.appendChild(elem);
+        continue;
+      }
+
+      if (rawString.substring(i, i + 3) === "Tok") {
+        i += 2;
+        const elem = document.createElement("span");
+        elem.textContent = "Tok";
+        elem.classList.add("tok", 'bold', 'content');
+        element.appendChild(elem);
         continue;
       }
 

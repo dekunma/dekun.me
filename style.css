@@ -85,6 +85,13 @@ span:hover {
   color: #003d4f;
 }
 
+.tik:hover {
+  color: #25f4ee;
+}
+.tok:hover {
+  color: #fe2c55;
+}
+
 @media screen and (min-width: 800px) {
   .bold {
     font-size: 4.5rem;
