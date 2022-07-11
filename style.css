@@ -20,12 +20,17 @@ a {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
+  cursor: none;
 }
 
 .my-icon {
   font-size: 2rem;
   color: #a2a2a2;
-  margin: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+.icon-container {
+  margin: -0.3rem;
 }
 
 .bold {
@@ -36,7 +41,7 @@ a {
 .outer-container {
   display: flex;
   align-items: center;
-  margin: 1.2rem;
+  padding: 1.2rem;
 }
 
 .content {
@@ -80,6 +85,13 @@ span:hover {
   color: #003d4f;
 }
 
+.tik:hover {
+  color: #25f4ee;
+}
+.tok:hover {
+  color: #fe2c55;
+}
+
 @media screen and (min-width: 800px) {
   .bold {
     font-size: 4.5rem;
@@ -89,7 +101,7 @@ span:hover {
   .outer-container {
     display: flex;
     align-items: center;
-    margin: 2rem;
+    padding: 2rem;
   }
 
   .content {
@@ -113,7 +125,7 @@ span:hover {
   .outer-container {
     display: flex;
     align-items: center;
-    margin: 3rem;
+    padding: 3rem;
   }
 
   .content {
