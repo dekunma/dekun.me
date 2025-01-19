@@ -1,2 +1,8 @@
-https://wucyx1p3n6.larksuite.com/docx/UsjmdDE1loMazjx2XVcuxhK2sVc
-返璞归真
+Dekun's personal website.  
+Powered by:
+
+- Notion
+- Vercel
+- https://github.com/splitbee/notion-api-worker
+- https://github.com/splitbee/react-notion
+- https://giscus.app/
