@@ -22,6 +22,7 @@ const CommentSection = () => {
         script.setAttribute('data-theme', 'preferred_color_scheme');
         script.setAttribute('data-lang', 'en');
         script.setAttribute('crossorigin', 'anonymous');
+        script.setAttribute('data-theme', 'light'); // Force light mode
         const container = document.getElementById('giscus-container');
         if (container) {
             container.appendChild(script);
